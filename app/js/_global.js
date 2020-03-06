@@ -58,9 +58,9 @@ app.global = {
 
             // clear all error marques
             formRows = document.querySelectorAll(".form__row");
-            formRows.forEach(function(row) {
-                row.classList.remove("form__row--error");
-            });
+            for (var i = 0; i < formRows.length; i++) {
+                formRows[i].classList.remove("form__row--error");
+            }
             document.querySelector(".form__message").innerHTML = ""
             document.querySelector(".form__message").classList.remove("form__message--error");
             document.querySelector(".form__message").classList.remove("form__message--success");
