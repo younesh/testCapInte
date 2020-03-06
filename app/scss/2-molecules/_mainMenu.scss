@@ -1,0 +1,121 @@
+.main-menu {
+    font-family: $font-light;
+    text-transform: uppercase;
+    left: inherit;
+    /* mobile menu */
+    &--desktop {
+        display: none;
+    }
+    /* mobile menu */
+    &--mobile {
+        display: block;
+        transition: $transition;
+        position: absolute;
+        top: $header-hight;
+        left: 0;
+        z-index: 1;
+        background-color: $color-brand-primary;
+        color: $color-white;
+        width: 100%;
+        @include padding($gutter-half);
+        >ul {
+            font-size: 2rem;
+            >li {
+                border-bottom: 1px solid $color-purple-light;
+                &:nth-last-of-type(1) {
+                    border-bottom: none;
+                }
+            }
+            li {
+                @include padding(10px null);
+            }
+            ul {
+                padding-left: 15px;
+            }
+        }
+        &.main-menu--hide {
+            left: -200%;
+        }
+    }
+}
+
+//-----  MEDIA QUERY / RESPONSIVE ----
+@media #{$bp-min-md} {
+    .main-menu {
+        display: flex;
+        /* desktop menu */
+        &--desktop {
+            height: $header-hight;
+            a {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                @include padding(null 19px);
+                &:hover,
+                &:focus {
+                    @include btnHoverDefault ();
+                }
+                &.active {
+                    //   border-bottom: 3px solid $color-brand-primary;
+                    position: relative;
+                    font-family: $font-bold;
+                    &:after {
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 3px;
+                        position: absolute;
+                        bottom: 0px;
+                        left: 0px;
+                        background-color: $color-brand-primary;
+                    }
+                }
+            }
+            >ul {
+                &,
+                li {
+                    height: 100%;
+                }
+                >li {
+                    float: left;
+                    &:hover,
+                    &:focus {
+                        ul {
+                            display: block;
+                            li & {
+                                background-color: green;
+                            }
+                        }
+                    }
+                    ul {
+                        display: none;
+                    }
+                    &.li-hover a {
+                        @include btnHoverDefault ();
+                    }
+                }
+                li.has-submenu {}
+                ul {
+                    position: absolute;
+                    background-color: $color-brand-primary;
+                    min-width: 260px;
+                    li {
+                        height: 48px;
+                        border-bottom: 1px solid $color-purple-light;
+                    }
+                    a {
+                        color: $color-white;
+                        &:hover,
+                        &:focus {
+                            background-color: $color-purple-dark;
+                        }
+                    }
+                }
+            }
+        }
+        /* mobile menu */
+        &--mobile {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>
+        
+    home -
+    Kit-starter for web template 201910 v 1.0
+
+    </title>
+    <!-- CSS File -->
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body class="layout-base 
+    page-contact
+">
+    <header class="header">
+    <div class="header__inner">
+        <figure class="header__logo">
+            <img src="img/logo.png" alt="logo du site">
+        </figure>
+        <nav class="main-menu main-menu--desktop">
+                        <ul>
+                <li>
+                    <a href="#"> <span>Home</span> </a>
+                </li>
+                <li>
+                    <a href="#"> <span>Notre équipe</span> </a>
+                </li>
+                <li class="has-submenu"><a href="#"> <span>Nos métiers</span> </a>
+                    <ul>
+                        <li><a href="#"><span>Designer UX</span></a></li>
+                        <li><a href="#"><span>Designer UI</span></a></li>
+                        <li><a href="#"><span>Intégrateur</span></a></li>
+                    </ul>
+                
+                </li>
+                <li><a href="#"> <span>Notre démarche </span></a></li>
+                <li><a href="#" class="active"> <span>Contact </span></a></li>
+            </ul>
+        </nav>
+        <a href="#" class="button button--burger">
+            <span class="button__barre1"></span>
+            <span class="button__barre2"></span>
+            <span class="button__barre3"></span>
+        </a>
+    </div>
+    <!--  -->
+</header>
+
+<nav class="main-menu main-menu--mobile main-menu--hide">
+                <ul>
+                <li>
+                    <a href="#"> <span>Home</span> </a>
+                </li>
+                <li>
+                    <a href="#"> <span>Notre équipe</span> </a>
+                </li>
+                <li class="has-submenu"><a href="#"> <span>Nos métiers</span> </a>
+                    <ul>
+                        <li><a href="#"><span>Designer UX</span></a></li>
+                        <li><a href="#"><span>Designer UI</span></a></li>
+                        <li><a href="#"><span>Intégrateur</span></a></li>
+                    </ul>
+                
+                </li>
+                <li><a href="#"> <span>Notre démarche </span></a></li>
+                <li><a href="#" class="active"> <span>Contact </span></a></li>
+            </ul>
+</nav>
+    <main class="main">
+        
+    <div class="form form--contact">
+        <h1 class="form__title">
+            Nous contacter
+        </h1>
+        <form action="validationContact.php" id="formContact">
+            <div class="form__row">
+                <label for="name">Nom - Prénom <span class="form__asterix">*</span></label>
+                <input type="text" id="name" value="" placeholder="Nom Prénom" required>
+            </div>
+            <div class="form__row">
+                <label for="company">Entreprise  </label>
+                 <input type="text"  value=""  id="company">
+            </div>
+            <div class="form__row">
+                <label for="email">Email  <span class="form__asterix">*</span></label>
+                 <input type="email" id="email"  value=""  required>
+            </div>
+
+            <div class="form__row form__row--textarea">
+                <label for="message">Message  <span class="form__asterix">*</span></label>
+                <textarea id="message"    required></textarea>
+            </div>
+            <div class="form__message">
+
+            </div>
+            <div class="form__buttons">
+                <input type="submit" class="button button--sendcontact">
+            </div>
+
+        </form>
+    </div>
+
+    </main>
+    <!-- JavaScript File-->
+    <script src="all.js?cb=1560431403150YnS"></script>
+</body>
+
+</html>

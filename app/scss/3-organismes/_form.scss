@@ -1,0 +1,90 @@
+    /* all form field : */
+    
+    #{$all-text-inputs} {
+        border: none;
+        &::placeholder {
+            color: $color-gray-dark;
+        }
+    }
+    
+    .form {
+        @include bigCard();
+        #{$all-text-inputs} {
+            width: 100%;
+            display: block;
+            height: 40px;
+        }
+        /* .form__row */
+        &__row {
+            min-height: 34px;
+            border-bottom: 2px solid $color-gray-meduim;
+            margin-bottom: 18px;
+            @include padding(null 5px);
+            &--error {
+                border-bottom: 2px solid $color-red-meduim;
+            }
+            &--textarea {
+                height: auto;
+                textarea {
+                    width: 100%;
+                    min-height: 98px;
+                    margin-top: 10px;
+                }
+            }
+        }
+        /* .form__message */
+        &__message {
+            @include padding($gutter-half);
+            p {
+                @include padding(10px null);
+            }
+            // .form__message--error
+            &--error {
+                color: $color-red-dark;
+                background-color: $color-red-light;
+            }
+            // .form__message--success
+            &--success {
+                color: $color-green-dark;
+                background-color: $color-green-light;
+            }
+        }
+        label {
+            font-family: $font-bold;
+            font-size: 1.6rem;
+            min-width: 125px;
+            display: inline-block;
+        }
+        .form__asterix {
+            color: $color-red-meduim;
+        }
+        .form__buttons {
+            padding-top: 40px;
+            text-align: center;
+        }
+    }
+    
+    //-----  MEDIA QUERY / RESPONSIVE ----
+    @media #{$bp-min-sm} {
+        .form {
+            label {
+                min-width: 180px;
+            }
+            #{$all-text-inputs} {
+                width: calc(100% - 184px);
+                display: inline-block;
+            }
+            .form__row {
+                height: 34px;
+                >* {
+                    height: 100%;
+                }
+                &--textarea {
+                    height: auto;
+                    textarea {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }

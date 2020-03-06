@@ -1,0 +1,30 @@
+.header {
+    background-color: $color-white; // $color-white
+    position: relative;
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: $header-hight;
+        @include padding(null 20px);
+    }
+}
+
+//-----  MEDIA QUERY / RESPONSIVE ----
+@media #{$bp-min-sm} {
+    .header {
+        &__inner {
+            @include padding(null 60px);
+        }
+    }
+}
+
+@media #{$bp-min-md} {
+    .header {
+        &__inner {
+            .button--burger {
+                display: none;
+            }
+        }
+    }
+}

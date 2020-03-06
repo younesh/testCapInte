@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>
+        {% block pageTitle %}{% endblock %}
+    </title>
+    <!-- CSS File -->
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body class="layout-base {% block classPage %}{% endblock %}">
+    {% include "header.twig" %}
+    <main class="main">
+        {% block page %}{% endblock %}
+    </main>
+    <!-- JavaScript File-->
+    <script src="all.js?cb=1560431403150YnS"></script>
+</body>
+
+</html>

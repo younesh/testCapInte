@@ -1,0 +1,61 @@
+// FONTS
+$font-light: 'Ubuntu-Light';
+$font-regular: 'Ubuntu-Regular';
+$font-semibold: 'Ubuntu-Medium';
+$font-bold: 'Ubuntu-Bold';
+$font-family-titles: $font-bold;
+$font-family-content: $font-semibold;
+$fw-title-light: 300;
+$fw-title-regular: 400;
+$fw-title-bold: 700;
+$fw-title-black: 900;
+// COLORS 
+$color-black-meduim: #333;
+$color-purple-dark: #96264e;
+$color-purple-meduim: #e51e56;
+$color-purple-light: #ef789a;
+$color-red-dark: #bf0000;
+$color-red-meduim: #dd0000;
+$color-red-light: #ffc0c0;
+$color-green-dark: #098e22;
+$color-green-light: #b5f2c1;
+$color-gray-dark: #999;
+$color-gray-meduim: #cecece;
+$color-gray-light: #e8ecef;
+$color-white: #fff;
+$color-brand-primary: $color-purple-meduim;
+$color-brand-secondary: $color-black-meduim;
+$color-brand-third: $color-gray-meduim;
+// borders : 
+$border-default: 1px solid $color-gray-meduim;
+$border-white: 1px solid white;
+// transition 
+$transition: left .3s ease;
+// border shadow :
+
+/*----- RESPONSIVE ------*/
+
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+// Grid containers
+$container-max-widths: (sm: 540px, md: 720px, lg: 991px, xl: 1200px);
+// MEDIA QUERY
+$bp-min-sm: "only screen and (min-width: #{map-get($grid-breakpoints, "sm")})"; // min 576px
+$bp-min-md: "only screen and (min-width: #{map-get($grid-breakpoints, "md")})"; // min 768px
+$bp-min-lg: "only screen and (min-width: #{map-get($grid-breakpoints, "lg")})"; // min 992px
+$bp-min-xl: "only screen and (min-width: #{map-get($grid-breakpoints, "xl")})"; // min 1200px
+$bp-max-sm: "only screen and (max-width: #{map-get($grid-breakpoints, "md")-1})"; // max 767px
+$bp-max-md: "only screen and (max-width: #{map-get($grid-breakpoints, "lg")-1})"; // max 991px
+$bp-max-lg: "only screen and (max-width: #{map-get($grid-breakpoints, "xl")-1})"; // max 1199px
+// only small tablet : from 768 to 991
+$bp-only-tablet: "only screen and (min-width: #{map-get($grid-breakpoints, "md")}) and (max-width: #{map-get($grid-breakpoints, "lg")-1})";
+// step 03 : affect css variable on scss varaible
+// spacing 
+$gutter-base: 30px; // var(--gutter-base)
+$gutter-half: 15px; // var(--gutter-half)
+$header-hight:60px;
+//  taille font
+$fz-default: 1.4rem; // var(--fz-default)
+$fz-h1: 2.6rem; // var(--fz-h1)
+$fz-h2: 2rem; // var(--fz-h2)
+$fz-h3: 1.7rem; // var(--fz-h3)
+$fz-h4: 1.5rem; // var(--fz-h4)

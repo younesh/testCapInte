@@ -1,0 +1,20 @@
+<header class="header">
+    <div class="header__inner">
+        <figure class="header__logo">
+            <img src="img/logo.png" alt="logo du site">
+        </figure>
+        <nav class="main-menu main-menu--desktop">
+            {% include "mainMenu.twig" %}
+        </nav>
+        <a href="#" class="button button--burger">
+            <span class="button__barre1"></span>
+            <span class="button__barre2"></span>
+            <span class="button__barre3"></span>
+        </a>
+    </div>
+    <!--  -->
+</header>
+{# mobile menu #}
+<nav class="main-menu main-menu--mobile main-menu--hide">
+    {% include "mainMenu.twig" %}
+</nav>

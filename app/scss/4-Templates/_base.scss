@@ -1,0 +1,28 @@
+/* layout for one middle card  */
+
+.layout-base {
+    main.main {
+        padding-top: $gutter-base;
+        >* {
+            width: auto;
+        }
+    }
+}
+
+//-----  MEDIA QUERY / RESPONSIVE ----
+@media #{$bp-min-sm} {
+    .layout-base {
+        main.main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 800px;
+            height: calc(100% - 60px);
+            >* {
+                width: 522px;
+            }
+        }
+    }
+}
+
+@media #{$bp-min-md} {}

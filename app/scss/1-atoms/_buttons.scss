@@ -1,0 +1,54 @@
+.button {
+    background-color: $color-brand-primary; //  $color-brand-primary
+    color: white;
+    border: none;
+    min-width: 200px;
+    min-height: 60px;
+    font-family: $font-bold;
+    font-size: 1.8rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    /* .button--burger */
+    &--burger {
+        min-width: 45px;
+        min-height: 45px;
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        justify-content: space-around;
+        span {
+            display: block;
+            height: 6px;
+            width: 100%;
+            background-color: $color-brand-primary;
+            transition: $transition;
+            transform: rotate(0deg);
+            left: 0px;
+            position: relative;
+            transform-origin: center;
+            opacity: 1;
+        }
+        /* .button--burger--close */
+        &--close {
+            .button__barre1 {
+                transform-origin: top left;
+                transform: rotate(45deg);
+                left: 8px;
+                position: relative;
+            }
+            .button__barre2 {
+                transform-origin: center;
+                transform: rotate(-45deg);
+                right: 8px;
+                position: relative;
+            }
+            .button__barre3 {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+button {
+    @extend .button;
+}
