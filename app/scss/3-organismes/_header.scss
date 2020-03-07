@@ -11,6 +11,12 @@
 }
 
 //-----  MEDIA QUERY / RESPONSIVE ----
+@media #{$bp-max-sm} {
+    .header {
+        border-bottom: 1.5pt solid $color-gray-light;
+    }
+}
+
 @media #{$bp-min-sm} {
     .header {
         &__inner {

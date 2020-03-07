@@ -12,8 +12,8 @@
     &--burger {
         min-width: 45px;
         min-height: 45px;
-        display: flex;
-        flex-direction: column;
+        /*display: flex;
+        flex-direction: column;*/
         background-color: transparent;
         justify-content: space-around;
         span {
@@ -27,6 +27,7 @@
             position: relative;
             transform-origin: center;
             opacity: 1;
+            @include margin(9px 0);
         }
         /* .button--burger--close */
         &--close {
