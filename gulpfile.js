@@ -112,16 +112,7 @@ function tplTask() {
             twig({
                 data: {
                     // here define a global variable for all site
-                    siteName: "Kit-starter for web template 201910 v 1.0",
-                    // config specifique au projet: c'est des variable global dans le twig
-                    TplInputCheckbox: "includes/forms/input-checkbox.twig",
-                    TplInputRadio: "includes/forms/input-radio.twig",
-                    TplEventLineStay: "includes/event-line-stay.twig",
-                    TplEventLineDays: "includes/event-line-days.twig",
-                    TplMainTopBtns: "includes/main-top-btns.twig",
-                    TplCptJauge: "includes/components/jauge/jauge.twig",
-                    TplCptSteps: "includes/components/validSteps.twig",
-                    TplCptFlipCard: "includes/components/flipCard.twig"
+                    siteName: "Test Prj ...."
                 },
                 errorLogToConsole: true,
                 cache: false
