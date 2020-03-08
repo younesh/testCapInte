@@ -8,22 +8,29 @@ app.global = {
     },
     mainMenuDesktHover: function() {
         /* li parent for subMenu  */
-        var subMenu = document.querySelector(".main-menu--desktop li > ul");
+        var subMenu = document.querySelector(".main-menu--desktop li ul");
         if (!subMenu) {
             return;
         }
         var liHoverCls = "li-hover";
-        subMenu.addEventListener("mouseover", function() {
+
+        function addHoverToParent() {
             if (!subMenu.parentNode.classList.contains(liHoverCls)) {
                 subMenu.parentNode.classList.add(liHoverCls);
+                subMenu.parentNode.focus;
             }
-        });
+        }
+        subMenu.addEventListener("mouseover", addHoverToParent, false);
+        subMenu.addEventListener("focusin", addHoverToParent, false);
 
-        subMenu.addEventListener("mouseout", function() {
+
+        function removeHoverFromParent() {
             if (subMenu.parentNode.classList.contains(liHoverCls)) {
                 subMenu.parentNode.classList.remove(liHoverCls);
             }
-        });
+        }
+        subMenu.addEventListener("mouseout", removeHoverFromParent, false);
+        subMenu.addEventListener("focusout", removeHoverFromParent, false);
 
     },
     /* mainMenuMobilSlide() : slide .main-menu--mobile   */
@@ -48,6 +55,7 @@ app.global = {
         return re.test(mail);
     },
     valideFormContact: function() {
+
         btnSubmitContact = document.querySelector(".button--sendcontact");
         if (!btnSubmitContact) {
             return;
@@ -72,7 +80,6 @@ app.global = {
                 messageError += "<p> - le champs ( Nom - Prénom ) est requis !</p>";
             }
 
-
             // validation email 
             var email = document.querySelector("#email");
             if (email.value.trim() == "") {
@@ -84,6 +91,7 @@ app.global = {
                 messageError += "<p> - le champs ( Email ) n'est pas comforme au format valide des email !</p>";
             }
 
+
             // validation Message 
             var message = document.querySelector("#message");
             if (message.value.trim() == "") {
@@ -92,18 +100,24 @@ app.global = {
             }
 
             if (messageError.trim() != "") {
-                var preError = "<p><strong>Merci de traiter les erreurs suivantes :</strong></p>"
+                var preError = "<p><strong>Merci de traiter les erreurs suivantes :</strong></p>";
                 document.querySelector(".form__message").classList.add("form__message--error");
                 document.querySelector(".form__message").innerHTML = preError + messageError;
             } else {
-                var preValidation = "<p><strong> Données du contact sont en cours d'envoie ... </strong></p>"
+                var preValidation = "<p><strong> Données du contact sont en cours d'envoie ... </strong></p>";
                 document.querySelector(".form__message").classList.add("form__message--success");
                 document.querySelector(".form__message").innerHTML = preValidation;
             }
         });
+
+        email.addEventListener("keyup", function() {
+            var email = document.querySelector("#email");
+            email.parentNode.classList.remove("form__row--error");
+            if (!app.global.validateEmail(email.value.trim())) {
+                email.parentNode.classList.add("form__row--error");
+            }
+        });
     }
-
-
 };
 
 

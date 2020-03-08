@@ -2,7 +2,7 @@
     font-family: $font-light;
     text-transform: uppercase;
     left: inherit;
-    /* mobile menu */
+    /* .main-menu--desktop */
     &--desktop {
         display: none;
     }
@@ -43,7 +43,7 @@
 @media #{$bp-min-md} {
     .main-menu {
         display: flex;
-        /* desktop menu */
+        /* .main-menu--desktop */
         &--desktop {
             height: $header-hight;
             a {
@@ -54,6 +54,9 @@
                 &:hover,
                 &:focus {
                     @include btnHoverDefault ();
+                    +ul {
+                        display: block;
+                    }
                 }
                 &.active {
                     //   border-bottom: 3px solid $color-brand-primary;
@@ -63,7 +66,7 @@
                         content: "";
                         display: block;
                         width: 100%;
-                        height: 3px;
+                        height: 4px;
                         position: absolute;
                         bottom: 0px;
                         left: 0px;
@@ -82,9 +85,6 @@
                     &:focus {
                         ul {
                             display: block;
-                            li & {
-                                background-color: green;
-                            }
                         }
                     }
                     ul {

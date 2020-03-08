@@ -2,6 +2,7 @@
     
     #{$all-text-inputs} {
         border: none;
+        outline: none;
         &::placeholder {
             color: $color-gray-dark;
         }
